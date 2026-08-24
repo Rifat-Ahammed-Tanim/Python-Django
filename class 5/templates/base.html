@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <!-- ==================== Navbar ==================== -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand fw-bold" href="#">My Website</a>
+
+          <!-- Mobile Toggle -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+          <!-- Navbar Content -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'index' %}">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'service' %}">Services</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Projects</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Blog</a>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Contact</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- Search -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+
+              <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %}
+
+    
+    {% endblock %}
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row g-4">
+          <!-- About -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <h5 class="fw-bold">My Website</h5>
+
+            <p class="text-secondary">We provide quality web development solutions and modern digital services for businesses and individuals.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 col-lg-2">
+            <h5 class="fw-bold">Quick Links</h5>
+
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-secondary text-decoration-none">Home</a>
+              </li>
+
+              <li class="mb-2">
+                <a href="#" class="text-secondary text-decoration-none">About</a>
+              </li>
+
+              <li class="mb-2">
+                <a href="#" class="text-secondary text-decoration-none">Services</a>
+              </li>
+
+              <li>
+                <a href="#" class="text-secondary text-decoration-none">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-6 col-md-3 col-lg-3">
+            <h5 class="fw-bold">Services</h5>
+
+            <ul class="list-unstyled text-secondary">
+              <li class="mb-2">Web Development</li>
+
+              <li class="mb-2">UI/UX Design</li>
+
+              <li class="mb-2">Django Development</li>
+
+              <li>Database Management</li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-12 col-lg-3">
+            <h5 class="fw-bold">Contact Us</h5>
+
+            <ul class="list-unstyled text-secondary">
+              <li class="mb-2">📍 Dhaka, Bangladesh</li>
+
+              <li class="mb-2">📞 +880 1234-567890</li>
+
+              <li>✉️ example@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <!-- Copyright -->
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center text-md-start">
+            <p class="mb-0 text-secondary">© 2026 My Website. All Rights Reserved.</p>
+          </div>
+
+          <!-- Social Links -->
+          <div class="col-12 col-md-6 text-center text-md-end mt-3 mt-md-0">
+            <a href="#" class="text-white text-decoration-none me-3">Facebook</a>
+
+            <a href="#" class="text-white text-decoration-none me-3">LinkedIn</a>
+
+            <a href="#" class="text-white text-decoration-none">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForClyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
