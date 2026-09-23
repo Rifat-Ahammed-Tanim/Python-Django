@@ -1,0 +1,11 @@
+<h1>hello world</h1>
+<ul>
+    {% for student in students %}
+        <li>{{ student.name }} - {{ student.age }} - {{ student.email }}</li>
+    
+    <div>
+        <img src="{{ student.profile_image.url }}" alt="{{ student.name }}" width="70" height="70" class="rounded-circle" style="object-fit: cover;" />
+    </div>
+
+    {% endfor %}
+</ul>
